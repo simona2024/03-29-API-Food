@@ -1,8 +1,6 @@
 function init() {
     getRandomActivity()
     getMusicActivity()
-    // getActivityByType ()
-    // getActivityByPrice()
     getActivityBykey()
   }
   
@@ -42,91 +40,7 @@ function init() {
     })
   }
 
-//   function getActivityByType () {
-//     fetch('http://www.boredapi.com/api/activity?type=')
-//     .then(res => res.json())
-//     .then(data => {
-//         console.log(data)
-//         const activityByType = data.type
-
-//         console.log(activityByType)
-//         const categoryForm = document.querySelector('#type-form')
-//         const SelectElement = document.querySelector('#type')
-
-//         const typeElemet = document.createElement('option')
-//         typeElemet.textContent = activityByType
-//         SelectElement.append(typeElemet) 
-//         categoryForm.addEventListener('submit', (event) => {
-//             event.preventDefoult()
-
-//             const activityParagraph = document.querySelector('#activity-paragraph')
-//             activityParagraph.textContent = 'Loading...'
-
-//             const selectedType = event.target
-//             console.log(selectedType)
-
-//             fetch('http://www.boredapi.com/api/activity?type=${selectedType}')
-//             .then(res => res.json())
-//             .then(type => {
-//                 activityParagraph.textContent = type
-                
-//             })
-//     })
-        
-//     })
-//    }
-
-//   function getTypeActivity() {
-
-//     const typeActivityButton = document.querySelector('#type-1')
-  
-//     typeActivityButton.addEventListener('click', () => {
-    
-//       fetch('http://www.boredapi.com/api/activity?type=music')
-//         .then(res => res.json())
-//         .then(data => {
-//           console.log(data)
-          
-//           const music = data.activity
-//         })
-//     })
-//     const typeForm = document.querySelector('#form-type')
-//     typeForm.addEventListener('submit', (event)=> {
-//         const form = event.target
-//         const type = form.type.value
-
-//         console.log('type', type )
-//     })
-//     // const musicActivityButton = document.querySelector('#music-activity-button')
-  
-//     // musicActivityButton.addEventListener('click', () => {
-//     //   const musicParagraph = document.querySelector('#form-type')
-//     //   musicParagraph.textContent = 'Loading...'
-    
-//     //   fetch('http://www.boredapi.com/api/activity?type=music')
-//     //     .then(res => res.json())
-//     //     .then(data => {
-//     //       console.log(data)
-          
-//     //       musicParagraph.textContent = data.activity
-//     //     })
-//     // })
-//   }
-
-
-
-//   function getActivityByPrice() {
-//     const priceItKnowledge = document.querySelector('it-knowledge')
-//     priceItKnowledge.addEventListener('submit', () => {
-//         fetch('http://www.boredapi.com/api/activity?minprice=0&maxprice=0.1')
-//         .then(res => res.json())
-//         .then(data => {
-//             console.log(data)
-//           priceItKnowledge.textContent = data['it-knowledge'].value
-//     })
-//     })
-//   }
-
+ 
   function getActivityBykey() {
     const form = document.querySelector('#search-form')
     
